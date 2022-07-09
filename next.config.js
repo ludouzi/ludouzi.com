@@ -4,4 +4,20 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  nextConfig,
+  async redirects() {
+    return [
+      {
+        source: '/fooyin',
+        destination: 'https://github.com/ludouzi/fooyin',
+        permanent: false,
+      },
+      {
+        source: '/mandaloci',
+        destination: 'https://github.com/ludouzi/mandaloci',
+        permanent: false,
+      },
+    ]
+  },
+}
